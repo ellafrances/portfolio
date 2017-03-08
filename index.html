@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Portfolio
+	</title>
+	<link rel="stylesheet" type="text/css" href="CSSindexportfolio.css">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:300" rel="stylesheet">
+
+<div id="centeredmenu" class="tab">
+   <ul>
+      <li><a href="javascript:void(0)" onclick="openTab(event, 'Home')">Home</a></li>
+      <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Over mij')">Over mij</a></li>
+      <li><a href="javascript:void(0)" class= "tablinks" onclick="openTab(event, 'Contact')">Contact</a></li>
+   </ul>
+</div>
+<script>
+    function openTab(evt, Name) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(Name).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+
+//(https://www.w3schools.com/howto/howto_js_tabs.asp)    
+</script>
+
+<div id="Home" class="tabcontent">
+  <h1>Home</h1>
+  <p>Hier staan de projecten waar ik gedurende het vak Interactieontwerp aan heb gewerkt</p>
+</div>
+
+<div id="Over mij" class="tabcontent">
+  <h1>Over mij</h1>
+  <p>Ik ben Ella Cordus, een eerstejaars student Informatiekunde aan de Universiteit van Amsterdam. Gedurende het vak Interactieontwerp en Multimediadesign heb ik zowel zelfstandig als in groepsverband aan opdrachten gewerkt met betrekking tot design. Deze opdrachten zijn hier, op mijn portfoliosite terug te vinden.</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1>Contactgegevens</h1>
+</div>
+</body>
+</html>
